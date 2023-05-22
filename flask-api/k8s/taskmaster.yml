@@ -17,6 +17,9 @@ spec:
       containers:
         - name: taskmaster
           image: trainwithshubham/taskmaster-python:latest
+          env:
+            - name: MONGO_URI
+              value: "mongodb://mongo:27017/dev"
           ports:
             - containerPort: 5000
           imagePullPolicy: Always
